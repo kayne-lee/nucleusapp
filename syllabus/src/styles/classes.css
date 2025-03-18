@@ -1,0 +1,539 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+
+.courses-page {
+    display: flex;
+    height: calc(100vh - 137px);
+    font-family: "Poppins", "Lato", "sans-serif";
+    background: white;
+    padding-left: 30px;
+    padding-right: 60px;
+    z-index: 2;
+}
+
+.sidebar {
+    /* display: grid;
+    grid-template-rows: 1fr 1fr; */
+    padding: 20px 20px 0 30px; /* Top Right Bottom Left */
+    /* margin-right: 150px; */
+    overflow-y: auto;
+    border-right: 2px solid #e0e0e0;
+    height: 652px;
+    width: 590px;
+}
+
+.add-course-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16.653px;
+    border: 1px solid #8B898D;
+    background: white;
+    margin-bottom: 15px;
+    height: 187px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    border-radius: 11.035px;
+background: linear-gradient(123deg, rgba(227, 204, 255, 0.80) 9.3%, rgba(243, 243, 243, 0.60) 44.23%, rgba(222, 203, 248, 0.50) 92.46%);
+}
+
+.add-course-card:hover {
+    transform: scale(1.02);
+}
+
+.add-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #8338ec;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #8338ec;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-card {
+    display: flex;
+    background: #F3F3F3;
+    /* margin-bottom: 15px; */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    padding: 16px;
+    height: 187px;
+    width: 250px;
+}
+
+.course-card:hover {
+    transform: scale(1.02);
+}
+
+.course-card.selected {
+    border: 3px solid #8338ec;
+}
+
+
+.course-image {
+    width: 218px;
+    height: 131px;
+    object-fit: cover;
+    border-radius: 8.532px;
+}
+
+
+.course-details {
+    /* padding: 10px; */
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.course-details p{
+    color: #8B898D;
+}
+
+.course-details p strong{
+    color: #000;
+}
+
+.course-title {
+    color: #000;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+    padding-top: 10px;
+}
+
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    padding: 16px;
+    width: 100%;
+}
+
+/* COURSE DETAILS BOX (SOLO BOX ON THE RIGHT) */
+.main-content {
+    /* flex: 1.5; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0 20px 20px;
+    h1 {
+        color: #000;
+        font-family: Poppins;
+        font-size: 35.398px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
+
+.course-details-container {
+    background: #F2F2F2;
+
+    width: 739px;
+    height: 98%;
+    padding: 30px;  
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.course-details-container-inner {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.course-details-container h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #000;
+    padding-bottom: 10px;
+}
+
+.progress-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.progress-section p {
+    font-size: 16px;
+    color: #6D6D6D;
+}
+.meeting-information-section {
+    padding-left: 20px;
+}
+
+.meeting-information-section p{
+    color: #8B898D;
+}
+
+.meeting-information-section p strong{
+    color: #000;
+}
+
+.assignments-section {
+    border-radius: 15px;
+    min-width: 40%;
+    max-height: 508px;
+    overflow-y: auto;
+    
+}
+
+.assignments-section h3 {
+    font-size: 18px;
+    color: #8338EC;
+    margin-bottom: 15px;
+}
+
+.assignments-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.assignments-section ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.assignments-section ul li:last-child {
+    border-bottom: none;
+}
+
+.assignments-section ul li span {
+    font-size: 14px;
+    color: #6D6D6D;
+}
+
+/* Statistics Section */
+.statistics-section {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 340px; /* Match the width of the instructors container */
+}
+
+/* Grade Calculator (Left Side) */
+.grade-calculator {
+  flex: 1;
+}
+
+.grade-calculator .statistics-inner-box {
+  height: 160px; /* Reduced height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px; /* Reduced padding */
+}
+
+/* Tasks Container (Right Side) */
+.tasks-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Reduced gap */
+}
+
+.tasks-container .statistics-inner-box {
+  height: 75px; /* Reduced height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; /* Reduced padding */
+}
+
+/* Shared Styles for Statistics Boxes */
+.statistics-inner-box {
+  border-radius: 25px;
+  border: 3px solid #8338EC;
+  background: #FFF;
+  text-align: center;
+  width: 100%; /* Ensure boxes take full width of their container */
+}
+
+.statistics-inner-box h4 {
+  font-size: 14px;
+  color: #6D6D6D;
+  margin-bottom: 5px; /* Reduced margin */
+}
+
+.statistics-inner-box p {
+  font-size: 24px; /* Reduced font size */
+  font-weight: 800;
+  background: linear-gradient(180deg, #8338EC 0%, #BFA1E9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Additional Information Section */
+.additional-info-section {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.additional-info-section h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.info-scroll-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-bottom: 10px;
+    width: 100%;
+    position: relative;
+    height: auto;
+    min-height: 180px; /* Ensure container maintains height when items are hidden */
+}
+
+.info-item {
+    background: #FFF;
+    border-radius: 15px;
+    padding: 12px;
+    width: calc(50% - 4px);
+    height: 80px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: top left; /* Change transform origin to top left */
+    overflow: hidden;
+    position: absolute; /* Change to absolute positioning */
+    margin-bottom: 8px;
+}
+
+/* Position items in a 2x2 grid */
+.info-item:nth-child(1) { top: 0; left: 0; }
+.info-item:nth-child(2) { top: 0; left: calc(50% + 4px); }
+.info-item:nth-child(3) { top: 88px; left: 0; }
+.info-item:nth-child(4) { top: 88px; left: calc(50% + 4px); }
+
+.info-item.expanded {
+    position: absolute;
+    width: 100%;
+    min-height: 150px;
+    background: #F8F4FF;
+    border: 2px solid #8338EC;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: top left;
+    animation: expandAnimation 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.info-item h5 {
+    color: #000;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: #8338EC;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 4px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.info-content {
+    color: #6D6D6D;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-top: 8px;
+    padding: 8px;
+    background: white;
+    border-radius: 12px;
+    animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    max-height: calc(100% - 50px);
+    overflow-y: auto;
+}
+
+@keyframes expandAnimation {
+    from {
+        transform: scale(0.98);
+        opacity: 0.9;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.info-item:not(.expanded) {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* When any item is expanded, hide others */
+.info-scroll-container:has(.expanded) .info-item:not(.expanded) {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(0.98);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-button:hover {
+    transform: scale(1.2);
+}
+
+.info-item:hover:not(.expanded) {
+    background: #F8F4FF;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(131, 56, 236, 0.1);
+}
+
+/* Add these animations to your existing CSS */
+@keyframes scale-check {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.animate-scale-check {
+    animation: scale-check 0.3s ease-in-out;
+}
+
+.instructor-info-container {
+    background: #FFF;
+    border-radius: 25px;
+    padding: 20px;
+    width: 340px;
+    height: 220px;
+    max-height: 220px;
+    overflow-y: auto;
+}
+  
+.instructor-info-container h3 {
+    color: #8338EC;
+    font-size: 15px;
+    margin-bottom: 4px;
+    text-decoration: underline;
+    display: inline;
+}
+  
+.instructor-info-container h4 {
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 4px;
+    display: inline;
+}
+  
+.instructor-info-container p {
+    margin: 5px 0;
+    color: #8B898D;
+}
+  
+.instructor-info-container p strong {
+    color: #000;
+}
+
+
+/* OLD STYLES */
+/* .statistics-section {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.statistics-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.statistics-inner-box{
+    border-radius: 25px;
+    border: 3px solid #8338EC;
+    background: #FFF;
+    padding: 10px;
+}
+
+.statistics-inner-box-bottom {
+    border-radius: 25px;
+    border: 3px solid #8338EC;
+    background: #FFF;
+    padding: 10px;
+    width: 340px;
+    
+}
+
+.statistics-section div {
+    text-align: center;
+}
+
+.statistics-section h4 {
+    font-size: 14px;
+    color: #6D6D6D;
+}
+
+.statistics-section p {
+    font-size: 48px;
+    font-weight: 800;
+    background: linear-gradient(180deg, #8338EC 0%, #BFA1E9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
