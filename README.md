@@ -3,7 +3,7 @@
 > **Built by students, for students.**
 > Each semester, students waste hours juggling syllabi, deadlines, and grades across too many apps. We’ve been there—so we built **Nucleus**.
 
-**Live demo:** [https://nucleusapp.ca](https://nucleusapp.ca)
+**Live demo:** [[https://nucleusapp.ca](https://nucleusapp.ca)](https://youtu.be/Z_G1My7CPzA)
 
 ---
 
